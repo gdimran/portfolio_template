@@ -1,0 +1,110 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    .mdc-list.profile-menu-list a {
+        width: auto;
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    .mdc-list.profile-menu-list a i{
+        font-size: 18px;
+    }
+    
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    .mdc-list.profile-menu-list a {
+        width: auto;
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    .mdc-list.profile-menu-list a i{
+        font-size: 18px;
+    }
+   
+
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    .mdc-list.profile-menu-list {
+        display: none !important;
+    }
+    .mdc-icon-button {
+        font-size: 20px;
+        width: 25px;
+        height: auto;
+        padding: 10px;
+    }
+    .userFullname {
+        display: none;
+    }
+    .mdc-top-app-bar__section--align-end {
+        justify-content: flex-start;
+        order: 1;
+    }
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .mdc-list.profile-menu-list {
+        display: none !important;
+    }
+    .mdc-icon-button {
+        font-size: 20px;
+        width: 25px;
+        height: auto;
+        padding: 10px;
+    }
+    .userFullname {
+        display: none;
+    }
+    .mdc-top-app-bar__section--align-end {
+        justify-content: flex-start;
+        order: 1;
+    }
+    
+  }

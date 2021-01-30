@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="css/login-register.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <title>Login Register</title>
+</head>
+
+<body>
+
+    <section class="header">
+        <div class="branding">
+            <a href="">
+                <img class="logo" src="images/MASTER-ACADEMY.svg">
+                <h1>Master Academy</h1>
+            </a>
+        </div>
+    </section>
+    <main>
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <div class="mdc-card login-card">
+                        <div class="mdc-card__primary-actio">
+                            <div class="mdc-tab-bar" role="tablist">
+                                <div class="mdc-tab-scroller">
+                                    <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
+                                        style="margin-bottom: -17px;">
+                                        <div class="mdc-tab-scroller__scroll-content">
+                                            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true"
+                                                tabindex="0" id="loginform-tab">
+                                                <span class="mdc-tab__content">
+                                                    <span  class="mdc-tab__text-label">Login</span>
+                                                </span>
+                                                <span  class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"  style=""></span>
+                                                </span>
+                                                <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+                                                </button>
+                                                <button class="mdc-tab" role="tab" tabindex="0" id="registerform-tab">
+                                                    <span class="mdc-tab__content">
+                                                        <span class="mdc-tab__text-label">Register</span>
+                                                    </span>
+                                                    <span class="mdc-tab-indicator">
+                                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline" style=""></span>
+                                                    </span>
+                                                    <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+                                                </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabdetails">
+                                <div id="loginform-content" class="tab-content">
+                                    <div class="form-title"><h2 class="text-center">Log in <span class="material-icons">
+                                        trending_flat
+                                        </span> Build CV <span class="material-icons">
+                                            trending_flat
+                                            </span> Get to work</h2>
+                                    </div>
+                                    <form action="#" method="post" class="login-form">
+                                        <div class="mdc-form-field">
+                                            <label class="mdc-text-field mdc-text-field--outlined form-input-style">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label" id="isername">Username</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input" aria-labelledby="isername">
+                                            </label>
+                                        </div>
+                                        <div class="mdc-form-field">
+                                            <label class="mdc-text-field mdc-text-field--outlined form-input-style">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label" id="password">Password</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="password" class="mdc-text-field__input" aria-labelledby="password">
+                                            </label>
+                                        </div>
+                                        <div class="submit-btn">
+                                            <button class="mdc-button mdc-button--outlined">
+                                                <div class="mdc-button__ripple"></div>
+                                                <span class="mdc-button__label">Login</span>
+                                            </button>
+                                        </div>
+
+                                        <a href="#" class="forgot-pass">Forgotten Password?</a>
+                                    </form>
+                                    <div class="social-login">
+                                        <div class="or-text">
+                                            <h5>Or</h5>
+                                            <p>Login with social accounts</p>
+                                          
+                                        </div>
+                                        <ul class="social-icons">
+                                            <li class="social-link gmail">
+                                                <a href="">
+                                                    <img src="images/gmail.png">
+                                                </a>
+                                            </li>
+                                            <li class="social-link">
+                                                <a href="">
+                                                    <img src="images/github.png">
+                                                </a>
+                                            </li>
+                                            <li class="social-link">
+                                                <a href="">
+                                                    <img src="images/facebook.png">
+                                                </a>
+                                            </li>
+                                            <li class="social-link">
+                                                <a href="">
+                                                    <img src="images/linkedin.png">
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div id="registerform-content" class="tab-content">
+                                    <div class="form-title"><h2 class="text-center">Create Your Account for Free</h2>
+                                    </div>
+                                    <form action="#" method="post" class="login-form">
+                                        <div class="mdc-form-field">
+                                            <label class="mdc-text-field mdc-text-field--outlined form-input-style">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label" id="my-label-id">First Name</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                                            </label>
+                                        </div>
+                                        <div class="mdc-form-field">
+                                            <label class="mdc-text-field mdc-text-field--outlined form-input-style">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label" id="my-label-id">Last Name</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                                            </label>
+                                        </div>
+                                        <div class="mdc-form-field">
+                                            <label class="mdc-text-field mdc-text-field--outlined form-input-style">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label" id="email">Email</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="email" class="mdc-text-field__input" aria-labelledby="email">
+                                            </label>
+                                        </div>
+                                        <div class="mdc-form-field">
+                                            <label class="mdc-text-field mdc-text-field--outlined form-input-style">
+                                                <span class="mdc-notched-outline">
+                                                    <span class="mdc-notched-outline__leading"></span>
+                                                    <span class="mdc-notched-outline__notch">
+                                                        <span class="mdc-floating-label" id="phone">Phone Number</span>
+                                                    </span>
+                                                    <span class="mdc-notched-outline__trailing"></span>
+                                                </span>
+                                                <input type="text" class="mdc-text-field__input" aria-labelledby="phone">
+                                            </label>
+                                        </div>
+                                        
+                                        <div class="submit-btn">
+                                            <button class="mdc-button  mdc-button--outlined">
+                                                <div class="mdc-button__ripple"></div>
+                                                <span class="mdc-button__label">Register</span>
+                                            </button>
+                                        </div>
+                                    </form>
+
+                                    <div class="social-login">
+                                        <div class="or-text">
+                                            <h5>Or</h5>
+                                            <p>Create with social accounts</p>
+                                            
+                                        </div>
+                                        <ul class="social-icons">
+                                            <li class="social-link gmail">
+                                                <a href="">
+                                                    <img src="images/gmail.png">
+                                                </a>
+                                            </li>
+                                            <li class="social-link">
+                                                <a href="">
+                                                    <img src="images/github.png">
+                                                </a>
+                                            </li>
+                                            <li class="social-link">
+                                                <a href="">
+                                                    <img src="images/facebook.png">
+                                                </a>
+                                            </li>
+                                            <li class="social-link">
+                                                <a href="">
+                                                    <img src="images/linkedin.png">
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/login-register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1687 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/color.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="plugins/slick/slick-style.css">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <title>Dashboard</title>
+</head>
+
+<body class="mdc-typography--body2">
+    <section id="header">
+        <header class="mdc-top-app-bar">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+                        aria-label="Open navigation menu">menu</button>
+                    <span class="mdc-top-app-bar__title brand">
+                        Master Academy</span>
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                    <form class="search-container mdc-top-app-bar__action-item" action="/search" method="get">
+                        <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+                        <label class="search-btn searchbutton" for="searchright"><span
+                                class="mglass material-icons">search</span></label>
+                    </form>
+                    <!-- <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+                        aria-label="Search">search</button> -->
+                    <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+                        aria-label="notification_important">notification_important</button>
+                    <button id="msgbtn" class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+                        aria-label="mail_outline">mail_outline</button>
+
+                    <div id="toolbar" class="toolbar mdc-menu-surface--anchor">
+                        <div id="message" class="mdc-menu mdc-menu-surface">
+                            <div class="userinfo">
+                                <h4 class="toolbar-heading">New Message</h4>
+                                <a class="noticeLink">4 New Message</a>
+                            </div>
+
+                            <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical"
+                                tabindex="-1">
+                                <li class="mdc-list-item role=" menuitem" mdc-ripple-upgraded" tabindex="0">
+                                    <span class="mdc-list-item__graphic circle-bg material-icons" aria-hidden="true">
+                                        person
+                                    </span>
+                                    <span class="mdc-list-item__text">
+                                        <span class="mdc-list-item__primary-text">
+                                            Imran Hossain
+                                        </span>
+                                        <span class="mdc-list-item__secondary-text">
+                                            Hi, It's an emergency, please resonse.
+                                        </span>
+                                    </span>
+                                    <span class="mdc-list-item__ripple"></span>
+                                </li>
+                                <li class="mdc-list-item role=" menuitem" mdc-ripple-upgraded" tabindex="0">
+                                    <span class="mdc-list-item__graphic circle-bg material-icons" aria-hidden="true">
+                                        person
+                                    </span>
+                                    <span class="mdc-list-item__text">
+                                        <span class="mdc-list-item__primary-text">
+                                            Ujjal Hossain
+                                        </span>
+                                        <span class="mdc-list-item__secondary-text">
+                                            Hi, It's an emergency, please resonse.
+                                        </span>
+                                    </span>
+                                    <span class="mdc-list-item__ripple"></span>
+                                </li>
+                                <li class="mdc-list-item role=" menuitem" mdc-ripple-upgraded" tabindex="0">
+                                    <span class="mdc-list-item__graphic circle-bg material-icons" aria-hidden="true">
+                                        person
+                                    </span>
+                                    <span class="mdc-list-item__text">
+                                        <span class="mdc-list-item__primary-text">
+                                            Rakibul Islam
+                                        </span>
+                                        <span class="mdc-list-item__secondary-text">
+                                            Hi, It's an emergency, please resonse.
+                                        </span>
+                                    </span>
+                                    <span class="mdc-list-item__ripple"></span>
+                                </li>
+                                <li class="mdc-list-item role=" menuitem" mdc-ripple-upgraded" tabindex="0">
+                                    <span class="mdc-list-item__graphic circle-bg material-icons" aria-hidden="true">
+                                        person
+                                    </span>
+                                    <span class="mdc-list-item__text">
+                                        <span class="mdc-list-item__primary-text">
+                                            Abdul Hai
+                                        </span>
+                                        <span class="mdc-list-item__secondary-text">
+                                            Hi, It's an emergency, please resonse.
+                                        </span>
+                                    </span>
+                                    <span class="mdc-list-item__ripple"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+                        aria-label="Options">more_vert</button>
+                    <button id="account" class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+                        aria-label="Account">account_circle</button>
+                    <h4 class="userFullname">Hi, Imran Hossain</h4>
+                    <div id="toolbar" class="toolbar mdc-menu-surface--anchor">
+                        <div id="actinfo" class="mdc-menu mdc-menu-surface">
+                            <div class="userinfo">
+                                <h4 class="userFullname">Hi, Imran Hossain</h4>
+                                <p class="userEmail">gdimran@gmail.com</p>
+                            </div>
+
+                            <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical"
+                                tabindex="-1">
+                                <li class="mdc-list-item" role="menuitem">
+                                    <span class="material-icons mdc-list-item__graphic">settings</span>
+                                    <span class="mdc-list-item__ripple"></span>
+                                    <span class="mdc-list-item__text">Account Settings</span>
+                                </li>
+                                <li class="mdc-list-item" role="menuitem">
+                                    <span class="material-icons mdc-list-item__graphic">lock_open</span>
+                                    <span class="mdc-list-item__ripple"></span>
+                                    <span class="mdc-list-item__text">Logout</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </section>
+            </div>
+        </header>
+    </section>
+    <section id="drawer">
+        <aside class="mdc-drawer mdc-drawer--modal">
+            <div class="mdc-drawer__header">
+                <h3 class="mdc-drawer__title">Imran Hossain</h3>
+                <h6 class="mdc-drawer__subtitle">email@material.io</h6>
+            </div>
+            <div class="mdc-drawer__content">
+                <nav class="mdc-list">
+                    <a class="mdc-list-item mdc-list-item--activated" href="#aboutMe" aria-current="page" tabindex="-1"
+                        aria-selected="false">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-button__label">About me</span>
+                        <i class="material-icons mdc-button__icon">person</i>
+                    </a>
+                    <a class="mdc-list-item" href="#Resume" aria-current="page" tabindex="-1" aria-selected="false">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-button__label">Resume</span>
+                        <i class="material-icons mdc-button__icon">text_snippet</i>
+                    </a>
+                    <a class="mdc-list-item" href="#Services" aria-current="page" tabindex="-1" aria-selected="false">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-button__label">Portfolio</span>
+                        <i class="material-icons mdc-button__icon">camera</i>
+                    </a>
+                    <a class="mdc-list-item" href="#Portfolio" aria-current="page" tabindex="-1" aria-selected="false">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-button__label">Services</span>
+                        <i class="material-icons mdc-button__icon">design_services</i>
+                    </a>
+                    <a class="mdc-list-item" href="#reviews" aria-current="page" tabindex="-1" aria-selected="false">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-button__label">Reviews</span>
+                        <i class="material-icons mdc-button__icon">comment</i>
+                    </a>
+                    <a class="mdc-list-item" href="#contacts" aria-current="page" tabindex="-1" aria-selected="false">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-button__label">Contact</span>
+                        <i class="material-icons mdc-button__icon">phone</i>
+                    </a>
+                    <a class="mdc-list-item" href="index.html" aria-current="page" tabindex="-1" aria-selected="false">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-button__label">Logout</span>
+                        <i class="material-icons mdc-button__icon">lock_open</i>
+                    </a>
+
+                </nav>
+            </div>
+        </aside>
+
+        <div id="scrollbar" class="mdc-drawer-scrim"></div>
+    </section>
+
+    <section class="menu-content">
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <div class="profile-menu">
+                        <div class="mdc-card">
+                            <div class="page-title">Portfolio</div>
+                            <div class="mdc-card__actions">
+                                <div class="mdc-card__action-buttons">
+                                    <nav class="mdc-list profile-menu-list">
+                                        <a class="mdc-list-item mdc-list-item--activated" href="#aboutMe"
+                                            aria-current="page" tabindex="-1" aria-selected="false">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-button__label">About me</span>
+                                            <i class="material-icons mdc-button__icon">person</i>
+                                        </a>
+                                        <a class="mdc-list-item" href="#Resume" aria-current="page" tabindex="-1"
+                                            aria-selected="false">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-button__label">Resume</span>
+                                            <i class="material-icons mdc-button__icon">text_snippet</i>
+                                        </a>
+                                        <a class="mdc-list-item" href="#Services" aria-current="page" tabindex="-1"
+                                            aria-selected="false">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-button__label">Portfolio</span>
+                                            <i class="material-icons mdc-button__icon">camera</i>
+                                        </a>
+                                        <a class="mdc-list-item" href="#Portfolio" aria-current="page" tabindex="-1"
+                                            aria-selected="false">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-button__label">Services</span>
+                                            <i class="material-icons mdc-button__icon">design_services</i>
+                                        </a>
+                                        <a class="mdc-list-item" href="#reviews" aria-current="page" tabindex="-1"
+                                            aria-selected="false">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-button__label">Reviews</span>
+                                            <i class="material-icons mdc-button__icon">comment</i>
+                                        </a>
+                                        <a class="mdc-list-item" href="#contacts" aria-current="page" tabindex="-1"
+                                            aria-selected="false">
+                                            <span class="mdc-list-item__ripple"></span>
+                                            <span class="mdc-button__label">Contact</span>
+                                            <i class="material-icons mdc-button__icon">phone</i>
+                                        </a>
+
+                                    </nav>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutMe" class="about-me">
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div
+                    class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                    <!-- <div class="mdc-card">
+                        <div class="mdc-card__content"> -->
+                    <div class="personal-sec">
+                        <div class="mdc-layout-grid__inner">
+                            <div
+                                class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                                <div class="profile-image">
+                                    <div class="profile-pic">
+                                        <img src="images/imran.jpg">
+                                    </div>
+                                    <!-- <button class="rounded-button mdc-button mdc-button--raised">  <span class="mdc-button__ripple"></span> Pro</button> -->
+                                    <div class="social-icon">
+                                        <ul>
+                                            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                            <li><a href=""><i class="fab fa-github"></i></a></li>
+                                            <li><a href=""><i class="fab fa-pinterest"></i></a></li>
+                                            <li><a href=""><i class="fab fa-dribbble"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <button
+                                        class="rounded-button mdc-button mdc-button--unelevated demo-button-shaped mdc-ripple-upgraded"
+                                        style="--mdc-ripple-fg-size:55px; --mdc-ripple-fg-scale:1.972688859545706; --mdc-ripple-fg-translate-start:57.183349609375px, -17.29998779296875px; --mdc-ripple-fg-translate-end:18.34166717529297px, -9.5px;"><span
+                                            class="mdc-button__ripple"></span><i
+                                            class="material-icons mdc-button__icon">get_app</i><span
+                                            class="mdc-button__label">Download My CV</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                                <div class="profile-info">
+                                    <div class="name">
+                                        <h4>Imran Hossain</h4>
+                                    </div>
+                                    <div class="job-title">Web Developer</div>
+                                    <div class="website">www.codeperpixels.com</div>
+                                    <div class="short-desc">
+                                        <p class="desc-text">Expert web developer with over 10 years of experience. I
+                                            worked almost exclusively with WordPress for 6+ years, but have been adding
+                                            more skills to my arsenal over the past couple of years. The idea is to move
+                                            to newer technologies, but I don't think I will be abandoning WP projects
+                                            entirely, not for a while.
+                                        </p>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <span class="badge-root">
+                                            <span class="badge-single deep-purple">
+                                                UI/UX
+                                            </span>
+                                        </span>
+                                        <span class="badge-root ">
+                                            <span class="badge-single blue">
+                                                Bootstrap
+                                            </span>
+                                        </span>
+                                        <span class="badge-root">
+                                            <span class="badge-single green">
+                                                Javascript
+                                            </span>
+                                        </span>
+                                        <span class="badge-root">
+                                            <span class="badge-single orange">
+                                                PHP
+                                            </span>
+                                        </span>
+                                        <span class="badge-root ">
+                                            <span class="badge-single cyan">
+                                                GO
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div>
+                    </div> -->
+                </div>
+                <div
+                    class="mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                    <div class="mdc-card">
+                        <div class="mdc-card__content">
+
+                            <div class="info-sec triangle-left">
+                                <div class="mdc-layout-grid__inner">
+                                    <div
+                                        class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                                        <div class="personal-info">
+                                            <div class="sec_sub_title">
+                                                <h5>Personal Info</h5>
+                                                <span id="dialogue-action" class="action-icon">
+                                                    <i class="fa fa-edit"></i>
+                                                </span>
+
+                                            </div>
+                                            <ul class="info-text">
+                                                <li><b>Birthday:</b> 13 Dec, 1994</li>
+                                                <li><b>Phone:</b> +880 1921 213329</li>
+                                                <li><b>Email: </b>gdimran@gmail</li>
+                                                <li><b>Skype:</b> gdimran98</li>
+                                                <li><b>Address:</b> 438/3A, Senpara Parbota, Kafrul, Dhaka,
+                                                    Bangladesh</li>
+                                            </ul>
+
+                                            <div class="mdc-dialog">
+                                                <div class="mdc-dialog__container">
+                                                    <div class="mdc-dialog__surface" role="alertdialog"
+                                                        aria-modal="true" aria-labelledby="my-dialog-title"
+                                                        aria-describedby="my-dialog-content">
+                                                        <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+                                                        <h2 class="mdc-dialog__title" id="my-dialog-title">
+                                                            Please Fillup the Form
+
+                                                        </h2>
+                                                        <div class="mdc-dialog__content" id="my-dialog-content">
+                                                            <table>
+
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="mdc-form-field">
+                                                                            <label
+                                                                                class="mdc-text-field mdc-text-field--outlined form-input-style">
+                                                                                <span class="mdc-notched-outline">
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__leading"></span>
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__notch">
+                                                                                        <span class="mdc-floating-label"
+                                                                                            id="my-label-id">Birthday</span>
+                                                                                    </span>
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__trailing"></span>
+                                                                                </span>
+                                                                                <input type="date"
+                                                                                    class="mdc-text-field__input"
+                                                                                    aria-labelledby="my-label-id">
+                                                                            </label>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="mdc-form-field">
+                                                                            <label
+                                                                                class="mdc-text-field mdc-text-field--outlined form-input-style">
+                                                                                <span class="mdc-notched-outline">
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__leading"></span>
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__notch">
+                                                                                        <span class="mdc-floating-label"
+                                                                                            id="my-label-id">Phone</span>
+                                                                                    </span>
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__trailing"></span>
+                                                                                </span>
+                                                                                <input type="text"
+                                                                                    class="mdc-text-field__input"
+                                                                                    aria-labelledby="my-label-id">
+                                                                            </label>
+                                                                        </div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="mdc-form-field">
+                                                                            <label
+                                                                                class="mdc-text-field mdc-text-field--outlined form-input-style">
+                                                                                <span class="mdc-notched-outline">
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__leading"></span>
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__notch">
+                                                                                        <span class="mdc-floating-label"
+                                                                                            id="my-label-id">Email</span>
+                                                                                    </span>
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__trailing"></span>
+                                                                                </span>
+                                                                                <input type="email"
+                                                                                    class="mdc-text-field__input"
+                                                                                    aria-labelledby="my-label-id">
+                                                                            </label>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="mdc-form-field">
+                                                                            <label
+                                                                                class="mdc-text-field mdc-text-field--outlined form-input-style">
+                                                                                <span class="mdc-notched-outline">
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__leading"></span>
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__notch">
+                                                                                        <span class="mdc-floating-label"
+                                                                                            id="my-label-id">Skype</span>
+                                                                                    </span>
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__trailing"></span>
+                                                                                </span>
+                                                                                <input type="text"
+                                                                                    class="mdc-text-field__input"
+                                                                                    aria-labelledby="my-label-id">
+                                                                            </label>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="mdc-form-field">
+                                                                            <label
+                                                                                class=" form-input-style mdc-text-field mdc-text-field--outlined mdc-text-field--textarea mdc-text-field--with-internal-counter">
+                                                                                <span class="mdc-notched-outline">
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__leading"></span>
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__notch">
+                                                                                        <span class="mdc-floating-label"
+                                                                                            id="my-label-id">Address</span>
+                                                                                    </span>
+                                                                                    <span
+                                                                                        class="mdc-notched-outline__trailing"></span>
+                                                                                </span>
+                                                                                <span class="mdc-text-field__resizer">
+                                                                                    <textarea
+                                                                                        class="mdc-text-field__input"
+                                                                                        aria-labelledby="my-label-id"
+                                                                                        rows="8" cols="40"
+                                                                                        maxlength="140"></textarea>
+                                                                                    <span
+                                                                                        class="mdc-text-field-character-counter">0
+                                                                                        /
+                                                                                        140</span>
+                                                                                </span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                            </table>
+                                                        </div>
+                                                        <div class="mdc-dialog__actions">
+                                                            <button type="button" class="mdc-button mdc-dialog__button"
+                                                                data-mdc-dialog-action="close">
+                                                                <div class="mdc-button__ripple"></div>
+                                                                <span class="mdc-button__label">Cancel</span>
+                                                            </button>
+                                                            <button type="button" class="mdc-button mdc-dialog__button"
+                                                                data-mdc-dialog-action="accept">
+                                                                <div class="mdc-button__ripple"></div>
+                                                                <span class="mdc-button__label">OK</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mdc-dialog__scrim"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                                        <div class="info-experties">
+                                            <div class="sec_sub_title">
+                                                <h5>My Expertise</h5>
+                                            </div>
+                                            <ul class="expertist-list">
+                                                <li class="mdc-list-item role=" menuitem" tabindex="0">
+
+                                                    <span class="mdc-list-item__graphic material-icons"
+                                                        aria-hidden="true">
+                                                        <i class="fa fa-paint-brush"></i>
+                                                    </span>
+                                                    <span class="mdc-list-item__text">
+                                                        <span class="mdc-list-item__primary-text">
+                                                            <b>Web Design</b>
+                                                        </span>
+                                                        <span class="mdc-list-item__secondary-text">
+                                                            Web application user interface design.
+                                                        </span>
+                                                    </span>
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                </li>
+                                                <li class="mdc-list-item role=" menuitem" tabindex="0">
+                                                    <span class="mdc-list-item__graphic material-icons"
+                                                        aria-hidden="true">
+                                                        <i class="fa fa-laptop"></i>
+                                                    </span>
+                                                    <span class="mdc-list-item__text">
+                                                        <span class="mdc-list-item__primary-text">
+                                                            <b>Web Development</b>
+                                                        </span>
+                                                        <span class="mdc-list-item__secondary-text">
+                                                            Web application develop using php, JavaScript and
+                                                            golang.
+                                                        </span>
+                                                    </span>
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                </li>
+                                                <li class="mdc-list-item role=" menuitem" tabindex="0">
+                                                    <span class="mdc-list-item__graphic material-icons"
+                                                        aria-hidden="true">
+                                                        <i class="fas fa-mobile-alt"></i>
+                                                    </span>
+                                                    <span class="mdc-list-item__text">
+                                                        <span class="mdc-list-item__primary-text">
+                                                            <b>Mobile Application</b>
+                                                        </span>
+                                                        <span class="mdc-list-item__secondary-text">
+                                                            Any kinds of mobile application design and development.
+                                                        </span>
+                                                    </span>
+                                                    <span class="mdc-list-item__ripple"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="Resume" class="resume">
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <div class="sec-title mdc-typography--headline5">
+                        <h5>My Resume</h5>
+                    </div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <div class="mdc-card">
+                        <div class="mdc-card__content">
+                            <div class="experties">
+                                <div class="sec_sub_title">
+                                    <h5>Expriences</h5>
+                                    <span class="section-icon"><i class="fa fa-briefcase"></i></span>
+                                </div>
+                                <div class="timeline mt-4">
+                                    <div class="exp">
+                                        <div class="resume-content">
+                                            <h5> Web Designer - Khadim Ceramics</h5>
+                                            <h6>September 2018 - current</h6>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s</p>
+                                        </div>
+                                    </div>
+                                    <div class="exp">
+                                        <div class="resume-content">
+                                            <h5> Web Designer - Outsource wwizard</h5>
+                                            <h6>September 2017 - June 2018</h6>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s</p>
+                                        </div>
+                                    </div>
+                                    <div class="exp">
+                                        <div class="resume-content">
+                                            <h5> UI Designer - Graphic People</h5>
+                                            <h6>February 2016 - May 2016</h6>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <div class="mdc-card">
+                        <div class="mdc-card__content">
+                            <div class="experties">
+                                <div class="sec_sub_title">
+                                    <h5>Education</h5>
+                                    <span class="section-icon"><i class="fa fa-pencil"></i></span>
+                                </div>
+                                <div class="timeline mt-4">
+                                    <div class="exp">
+                                        <div class="resume-content">
+                                            <h5> Web Designer - Khadim Ceramics</h5>
+                                            <h6>September 2018 - current</h6>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s</p>
+                                        </div>
+                                    </div>
+                                    <div class="exp">
+                                        <div class="resume-content">
+                                            <h5> Web Designer - Outsource wwizard</h5>
+                                            <h6>September 2017 - June 2018</h6>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s</p>
+                                        </div>
+                                    </div>
+                                    <div class="exp">
+                                        <div class="resume-content">
+                                            <h5> UI Designer - Graphic People</h5>
+                                            <h6>February 2016 - May 2016</h6>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <div class="mdc-card">
+                        <div class="mdc-card__content">
+                            <div class="experties">
+                                <div class="sec_sub_title">
+                                    <h5>Skills</h5>
+                                    <span class="section-icon"><span class="material-icons">
+                                            handyman
+                                        </span></span>
+                                </div>
+                                <div class="skill-content">
+                                    <div class="skill">
+                                        <div class="resume-content">
+                                            <h5> HTML/CSS</h5>
+                                            <div
+                                                class="skill-slider mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                                                <input class="mdc-slider__input" type="range" min="0" max="100"
+                                                    value="80" name="volume" step="10"
+                                                    aria-label="Discrete slider with tick marks demo">
+                                                <div class="mdc-slider__track">
+                                                    <div class="mdc-slider__track--inactive"></div>
+                                                    <div class="mdc-slider__track--active">
+                                                        <div class="mdc-slider__track--active_fill"></div>
+                                                    </div>
+                                                    <div class="mdc-slider__tick-marks">
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mdc-slider__thumb">
+                                                    <div class="mdc-slider__value-indicator-container"
+                                                        aria-hidden="true">
+                                                        <div class="mdc-slider__value-indicator">
+                                                            <span class="mdc-slider__value-indicator-text">
+                                                                50
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mdc-slider__thumb-knob"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="resume-content">
+                                            <h5> JQUERY</h5>
+                                            <div
+                                                class="skill-slider mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                                                <input class="mdc-slider__input" type="range" min="0" max="100"
+                                                    value="40" name="volume" step="10"
+                                                    aria-label="Discrete slider with tick marks demo">
+                                                <div class="mdc-slider__track">
+                                                    <div class="mdc-slider__track--inactive"></div>
+                                                    <div class="mdc-slider__track--active">
+                                                        <div class="mdc-slider__track--active_fill"></div>
+                                                    </div>
+                                                    <div class="mdc-slider__tick-marks">
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mdc-slider__thumb">
+                                                    <div class="mdc-slider__value-indicator-container"
+                                                        aria-hidden="true">
+                                                        <div class="mdc-slider__value-indicator">
+                                                            <span class="mdc-slider__value-indicator-text">
+                                                                50
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mdc-slider__thumb-knob"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="resume-content">
+                                            <h5>JavaScript</h5>
+                                            <div
+                                                class="skill-slider mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                                                <input class="mdc-slider__input" type="range" min="0" max="100"
+                                                    value="50" name="volume" step="10"
+                                                    aria-label="Discrete slider with tick marks demo">
+                                                <div class="mdc-slider__track">
+                                                    <div class="mdc-slider__track--inactive"></div>
+                                                    <div class="mdc-slider__track--active">
+                                                        <div class="mdc-slider__track--active_fill"></div>
+                                                    </div>
+                                                    <div class="mdc-slider__tick-marks">
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mdc-slider__thumb">
+                                                    <div class="mdc-slider__value-indicator-container"
+                                                        aria-hidden="true">
+                                                        <div class="mdc-slider__value-indicator">
+                                                            <span class="mdc-slider__value-indicator-text">
+                                                                50
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mdc-slider__thumb-knob"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="resume-content">
+                                            <h5>Photoshop</h5>
+                                            <div
+                                                class="skill-slider mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                                                <input class="mdc-slider__input" type="range" min="0" max="100"
+                                                    value="80" name="volume" step="10"
+                                                    aria-label="Discrete slider with tick marks demo">
+                                                <div class="mdc-slider__track">
+                                                    <div class="mdc-slider__track--inactive"></div>
+                                                    <div class="mdc-slider__track--active">
+                                                        <div class="mdc-slider__track--active_fill"></div>
+                                                    </div>
+                                                    <div class="mdc-slider__tick-marks">
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mdc-slider__thumb">
+                                                    <div class="mdc-slider__value-indicator-container"
+                                                        aria-hidden="true">
+                                                        <div class="mdc-slider__value-indicator">
+                                                            <span class="mdc-slider__value-indicator-text">
+                                                                50
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mdc-slider__thumb-knob"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="resume-content">
+                                            <h5>WordPress</h5>
+                                            <div
+                                                class="skill-slider mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                                                <input class="mdc-slider__input" type="range" min="0" max="100"
+                                                    value="70" name="volume" step="10"
+                                                    aria-label="Discrete slider with tick marks demo">
+                                                <div class="mdc-slider__track">
+                                                    <div class="mdc-slider__track--inactive"></div>
+                                                    <div class="mdc-slider__track--active">
+                                                        <div class="mdc-slider__track--active_fill"></div>
+                                                    </div>
+                                                    <div class="mdc-slider__tick-marks">
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mdc-slider__thumb">
+                                                    <div class="mdc-slider__value-indicator-container"
+                                                        aria-hidden="true">
+                                                        <div class="mdc-slider__value-indicator">
+                                                            <span class="mdc-slider__value-indicator-text">
+                                                                50
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mdc-slider__thumb-knob"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="resume-content">
+                                            <h5>PHP</h5>
+                                            <div
+                                                class="skill-slider mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                                                <input class="mdc-slider__input" type="range" min="0" max="100"
+                                                    value="60" name="volume" step="10"
+                                                    aria-label="Discrete slider with tick marks demo">
+                                                <div class="mdc-slider__track">
+                                                    <div class="mdc-slider__track--inactive"></div>
+                                                    <div class="mdc-slider__track--active">
+                                                        <div class="mdc-slider__track--active_fill"></div>
+                                                    </div>
+                                                    <div class="mdc-slider__tick-marks">
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mdc-slider__thumb">
+                                                    <div class="mdc-slider__value-indicator-container"
+                                                        aria-hidden="true">
+                                                        <div class="mdc-slider__value-indicator">
+                                                            <span class="mdc-slider__value-indicator-text">
+                                                                50
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mdc-slider__thumb-knob"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mdc-layout-grid__cell--span-4">
+                    <div class="mdc-card">
+                        <div class="mdc-card__content">
+                            <div class="experties">
+                                <div class="sec_sub_title">
+                                    <h5>Interests</h5>
+                                    <span class="section-icon"><span class="material-icons">
+                                            biotech
+                                        </span></span>
+                                </div>
+                                <div class="hoby-list">
+
+                                    <ul>
+                                        <li>
+                                            <span><i class="fa fa-microphone"></i></span>
+                                            <h6>Music</h6>
+                                        </li>
+
+                                        <li>
+                                            <span><i class="fa fa-gamepad"></i></span>
+                                            <h6>Gaming</h6>
+                                        </li>
+
+
+                                        <li>
+                                            <span><span class="material-icons">
+                                                    beach_access
+                                                </span></span>
+                                            <h6>Travel</h6>
+                                        </li>
+
+
+
+                                        <li>
+                                            <span><span class="material-icons">
+                                                    local_florist
+                                                </span></span>
+                                            <h6>Gardening</h6>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <div class="mdc-card">
+                        <div class="mdc-card__content">
+                            <div class="experties">
+                                <div class="sec_sub_title">
+                                    <h5>Language</h5>
+                                    <span class="section-icon"><span class="material-icons">
+                                            settings_voice
+                                        </span></span>
+                                </div>
+                                <div class="language-content">
+                                    <div class="language">
+                                        <div class="resume-content">
+                                            <h5> English</h5>
+                                            <div
+                                                class="skill-slider mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                                                <input class="mdc-slider__input" type="range" min="0" max="100"
+                                                    value="60" name="volume" step="10"
+                                                    aria-label="Discrete slider with tick marks demo">
+                                                <div class="mdc-slider__track">
+                                                    <div class="mdc-slider__track--inactive"></div>
+                                                    <div class="mdc-slider__track--active">
+                                                        <div class="mdc-slider__track--active_fill"></div>
+                                                    </div>
+                                                    <div class="mdc-slider__tick-marks">
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mdc-slider__thumb">
+                                                    <div class="mdc-slider__value-indicator-container"
+                                                        aria-hidden="true">
+                                                        <div class="mdc-slider__value-indicator">
+                                                            <span class="mdc-slider__value-indicator-text">
+                                                                50
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mdc-slider__thumb-knob"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="language">
+                                        <div class="resume-content">
+                                            <h5>Bangla</h5>
+                                            <div
+                                                class="skill-slider mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                                                <input class="mdc-slider__input" type="range" min="0" max="100"
+                                                    value="90" name="volume" step="10"
+                                                    aria-label="Discrete slider with tick marks demo">
+                                                <div class="mdc-slider__track">
+                                                    <div class="mdc-slider__track--inactive"></div>
+                                                    <div class="mdc-slider__track--active">
+                                                        <div class="mdc-slider__track--active_fill"></div>
+                                                    </div>
+                                                    <div class="mdc-slider__tick-marks">
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mdc-slider__thumb">
+                                                    <div class="mdc-slider__value-indicator-container"
+                                                        aria-hidden="true">
+                                                        <div class="mdc-slider__value-indicator">
+                                                            <span class="mdc-slider__value-indicator-text">
+                                                                50
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mdc-slider__thumb-knob"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="language">
+                                        <div class="resume-content">
+                                            <h5>Hindi</h5>
+                                            <div
+                                                class="skill-slider mdc-slider mdc-slider--discrete mdc-slider--tick-marks">
+                                                <input class="mdc-slider__input" type="range" min="0" max="100"
+                                                    value="50" name="volume" step="10"
+                                                    aria-label="Discrete slider with tick marks demo">
+                                                <div class="mdc-slider__track">
+                                                    <div class="mdc-slider__track--inactive"></div>
+                                                    <div class="mdc-slider__track--active">
+                                                        <div class="mdc-slider__track--active_fill"></div>
+                                                    </div>
+                                                    <div class="mdc-slider__tick-marks">
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--active"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                        <div class="mdc-slider__tick-mark--inactive"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="mdc-slider__thumb">
+                                                    <div class="mdc-slider__value-indicator-container"
+                                                        aria-hidden="true">
+                                                        <div class="mdc-slider__value-indicator">
+                                                            <span class="mdc-slider__value-indicator-text">
+                                                                50
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mdc-slider__thumb-knob"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4">
+                    <div class="mdc-card">
+                        <div class="mdc-card__content">
+                            <div class="experties">
+                                <div class="sec_sub_title">
+                                    <h5>Assets</h5>
+                                    <span class="section-icon"><span class="material-icons">
+                                            account_balance_wallet
+                                        </span></span>
+                                </div>
+                                <div class="ast-list">
+
+                                    <ul>
+                                        <li>
+                                            <span>Responsible</span>
+                                            <span>Diligence</span>
+                                            <span>Labour</span>
+                                        </li>
+
+                                        <li>
+                                            <span>Rigor</span>
+                                            <span>Creative</span>
+                                            <span>Funny</span>
+                                        </li>
+
+                                        <li>
+                                            <span>Great Communicator</span>
+                                            <span>Flexible</span>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="facts-content">
+            <div class="mdc-card">
+                <div class="mdc-card__content">
+                    <div class="facts">
+                        <div class="fact-item">
+                            <span class="material-icons">local_fire_department</span>
+                            <div class="details">
+                                <h3 class="mb-0 mt-0 number"><em class="count">198</em></h3>
+                                <p class="mb-0">Projects completed</p>
+                            </div>
+                        </div>
+                        <div class="fact-item">
+                            <span class="material-icons">free_breakfast </span>
+                            <div class="details">
+                                <h3 class="mb-0 mt-0 number"><em class="count">5670</em></h3>
+                                <p class="mb-0">Cup of coffee</p>
+                            </div>
+                        </div>
+                        <div class="fact-item">
+                            <span class="material-icons">people</span>
+                            <div class="details">
+                                <h3 class="mb-0 mt-0 number"><em class="count">427</em></h3>
+                                <p class="mb-0">Satisfied clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Services" class="services">
+        <div class="sec-title mdc-typography--headline5">
+            <h5>My Services</h5>
+        </div>
+        <div class="services-content">
+            <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell--span-4">
+                        <div class="services-list">
+                            <div class="services-list-content">
+                                <div class="list-icon list-icon-1">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div class="mt-3">
+                                    <h5 class="mb-0">Graphic Design</h5>
+                                    <p class=" mt-3">Modern and mobile-ready website that will help of your marketing.
+                                        Proin laoreet
+                                        elementum ligula, ac tincidunt lorem accumsan nec.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-4">
+                        <div class="services-list">
+                            <div class="services-list-content">
+                                <div class="list-icon list-icon-2">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="mt-3">
+                                    <h5 class="mb-0">Web Development</h5>
+                                    <p class=" mt-3">Modern and mobile-ready website that will help of your marketing.
+                                        Proin laoreet
+                                        elementum ligula, ac tincidunt lorem accumsan nec.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-4">
+                        <div class="services-list">
+                            <div class="services-list-content">
+                                <div class="list-icon list-icon-3">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="mt-3">
+                                    <h5 class="mb-0">Media Marketing</h5>
+                                    <p class=" mt-3">Modern and mobile-ready website that will help of your marketing.
+                                        Proin laoreet
+                                        elementum ligula, ac tincidunt lorem accumsan nec.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-4">
+                        <div class="services-list">
+                            <div class="services-list-content">
+                                <div class="list-icon list-icon-4">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="mt-3">
+                                    <h5 class="mb-0">Advetising</h5>
+                                    <p class=" mt-3">Modern and mobile-ready website that will help of your marketing.
+                                        Proin laoreet
+                                        elementum ligula, ac tincidunt lorem accumsan nec.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-4">
+                        <div class="services-list">
+                            <div class="services-list-content">
+                                <div class="list-icon list-icon-5">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div class="mt-3">
+                                    <h5 class="mb-0">Game Development</h5>
+                                    <p class=" mt-3">Modern and mobile-ready website that will help of your marketing.
+                                        Proin laoreet
+                                        elementum ligula, ac tincidunt lorem accumsan nec.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdc-layout-grid__cell--span-4">
+                        <div class="services-list">
+                            <div class="services-list-content">
+                                <div class="list-icon list-icon-6">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <div class="mt-3">
+                                    <h5 class="mb-0">Analytics</h5>
+                                    <p class=" mt-3">Modern and mobile-ready website that will help of your marketing.
+                                        Proin laoreet
+                                        elementum ligula, ac tincidunt lorem accumsan nec.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="Portfolio" class="portfolio">
+        <div class="sec-title mdc-typography--headline5">
+            <h5>Portfolio</h5>
+        </div>
+        <div id="filter-tab-container">
+            <button class="mdc-button filterBtn active" onclick="filterSelection('all')"><span
+                    class="mdc-button__ripple"></span> Show all</button>
+            <button class="mdc-button filterBtn" onclick="filterSelection('design')"> <span
+                    class="mdc-button__ripple"></span> Design</button>
+            <button class="mdc-button filterBtn" onclick="filterSelection('development')"> <span
+                    class="mdc-button__ripple"></span> Development</button>
+            <button class="mdc-button filterBtn" onclick="filterSelection('analytics')"> <span
+                    class="mdc-button__ripple"></span> Analytics</button>
+            <button class="mdc-button filterBtn" onclick="filterSelection('marketing')"> <span
+                    class="mdc-button__ripple"></span> Media Marketing</button>
+        </div>
+        <div class="portfolio-wrapper">
+            <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                    <div
+                        class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                        <div class="portfolio-item design">
+                            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+                                <a href="#protfolio-details" class="work-content">
+                                    <div class="portfolio-item-content rounded shadow-dark">
+                                        <div class="details">
+                                            <span class="term">Creative</span>
+                                            <h4 class="title">Guest App Walkthrough Screens</h4>
+                                            <span id="protfolio-details-action" class="more-button"><i
+                                                    class="fas fa-ellipsis-h"></i></span>
+                                        </div>
+                                        <div id="protfolio-details" class="mdc-dialog protfolio_details">
+                                            <div class="mdc-dialog__container">
+                                                <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true"
+                                                    aria-labelledby="my-dialog-title"
+                                                    aria-describedby="my-dialog-content">
+
+                                                    <div class="mdc-dialog__content" id="my-dialog-content">
+                                                        <div id="small-dialog" class="white-popup zoom-anim-dialog">
+                                                            <img src="images/single-work.svg" alt="Title">
+                                                            <h2>Guest App Walkthrough Screens</h2>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Etiam
+                                                                hendrerit nibh in massa semper rutrum. In rhoncus
+                                                                eleifend mi id
+                                                                tempus.</p>
+                                                            <p>Donec consectetur, libero at pretium euismod, nisl felis
+                                                                lobortis
+                                                                urna, id tristique nisl lectus eget ligula.</p>
+                                                            <a href="#" class="btn btn-default">View on Dribbble</a>
+                                                        </div>
+                                                        <button type="button" class="mdc-button dialog-close_btn"
+                                                            data-mdc-dialog-action="close">
+                                                            <div class="mdc-button__ripple"></div>
+                                                            <span class="mdc-button__label"><i
+                                                                    class="fas fa-times-circle"></i></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mdc-dialog__scrim"></div>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="images/2.svg" alt="Portfolio-title">
+                                            <div class="mask"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                        <div class="portfolio-item analytics">
+                            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+                                <a href="#small-dialog" class="work-content">
+                                    <div class="portfolio-item-content rounded shadow-dark">
+                                        <div class="details">
+                                            <span class="term">Creative</span>
+                                            <h4 class="title">Guest App Walkthrough Screens</h4>
+                                            <span class="more-button"><i class="fas fa-ellipsis-h"></i></span>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="images/6.svg" alt="Portfolio-title">
+                                            <div class="mask"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                        <div class="portfolio-item development">
+                            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+                                <a href="#small-dialog" class="work-content">
+                                    <div class="portfolio-item-content rounded shadow-dark">
+                                        <div class="details">
+                                            <span class="term">Creative</span>
+                                            <h4 class="title">Guest App Walkthrough Screens</h4>
+                                            <span class="more-button"><i class="fas fa-ellipsis-h"></i></span>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="images/2.svg" alt="Portfolio-title">
+                                            <div class="mask"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                        <div class="portfolio-item development">
+                            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+                                <a href="#small-dialog" class="work-content">
+                                    <div class="portfolio-item-content rounded shadow-dark">
+                                        <div class="details">
+                                            <span class="term">Creative</span>
+                                            <h4 class="title">Guest App Walkthrough Screens</h4>
+                                            <span class="more-button"><i class="fas fa-ellipsis-h"></i></span>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="images/2.svg" alt="Portfolio-title">
+                                            <div class="mask"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                        <div class="portfolio-item design">
+                            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+                                <a href="#small-dialog" class="work-content">
+                                    <div class="portfolio-item-content rounded shadow-dark">
+                                        <div class="details">
+                                            <span class="term">Creative</span>
+                                            <h4 class="title">Guest App Walkthrough Screens</h4>
+                                            <span class="more-button"><i class="fas fa-ellipsis-h"></i></span>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="images/3.svg" alt="Portfolio-title">
+                                            <div class="mask"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                        <div class="portfolio-item marketing">
+                            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+                                <a href="#small-dialog" class="work-content">
+                                    <div class="portfolio-item-content rounded shadow-dark">
+                                        <div class="details">
+                                            <span class="term">Creative</span>
+                                            <h4 class="title">Guest App Walkthrough Screens</h4>
+                                            <span class="more-button"><i class="fas fa-ellipsis-h"></i></span>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="images/4.svg" alt="Portfolio-title">
+                                            <div class="mask"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                        <div class="portfolio-item marketing">
+                            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+                                <a href="#small-dialog" class="work-content">
+                                    <div class="portfolio-item-content rounded shadow-dark">
+                                        <div class="details">
+                                            <span class="term">Creative</span>
+                                            <h4 class="title">Guest App Walkthrough Screens</h4>
+                                            <span class="more-button"><i class="fas fa-ellipsis-h"></i></span>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="images/5.svg" alt="Portfolio-title">
+                                            <div class="mask"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                        <div class="portfolio-item marketing">
+                            <div class="mdc-card demo-card demo-basic-with-text-over-media">
+                                <a href="#small-dialog" class="work-content">
+                                    <div class="portfolio-item-content rounded shadow-dark">
+                                        <div class="details">
+                                            <span class="term">Creative</span>
+                                            <h4 class="title">Guest App Walkthrough Screens</h4>
+                                            <span class="more-button"><i class="fas fa-ellipsis-h"></i></span>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="images/6.svg" alt="Portfolio-title">
+                                            <div class="mask"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="reviews" class="testimonial-sec">
+        <div class="sec-title mdc-typography--headline5">
+            <h5>Clients & Reviews</h5>
+        </div>
+        <div class="lazy slider" data-sizes="50vw">
+            <div class="testimonial-item">
+                <div class="profile-thum mb-3 mx-auto">
+                    <img src="images/imran.jpg" alt="customer-name">
+                </div>
+                <h4 class="mt-3 mb-0">John Doe</h4>
+                <span class="subtitle">Product designer at Dribbble</span>
+
+                <div class="mdc-card bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+                    <p class="mb-0">I enjoy working with the theme and learn so much. You guys make the process fun and
+                        interesting. Good luck! 🔥</p>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="profile-thum mb-3 mx-auto">
+                    <img src="images/imran.jpg" alt="customer-name">
+                </div>
+                <h4 class="mt-3 mb-0">John Doe</h4>
+                <span class="subtitle">Product designer at Dribbble</span>
+
+                <div class="mdc-card bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+                    <p class="mb-0">I enjoy working with the theme and learn so much. You guys make the process fun and
+                        interesting. Good luck! 🔥</p>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="profile-thum mb-3 mx-auto">
+                    <img src="images/imran.jpg" alt="customer-name">
+                </div>
+                <h4 class="mt-3 mb-0">John Doe</h4>
+                <span class="subtitle">Product designer at Dribbble</span>
+
+                <div class="mdc-card bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
+                    <p class="mb-0">I enjoy working with the theme and learn so much. You guys make the process fun and
+                        interesting. Good luck! 🔥</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="contacts" class="contact">
+        <div class="sec-title mdc-typography--headline5">
+            <h5>Get In Touch</h5>
+        </div>
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-4">
+                    <div class="contact-info">
+                        <h3 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Let's talk about
+                            everything!</h3>
+                        <p class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Don't like forms?
+                            Send me an <a href="mailto:name@example.com">email</a>. 👋</p>
+                    </div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-8">
+
+                    <form action="post">
+                        <div class="mdc-layout-grid__inner">
+                            <div class="mdc-layout-grid__cell--span-6">
+                                <div class="form-group">
+                                    <div
+                                        class="mdc-text-field text-field demo-text-field-outlined-shaped mdc-text-field--outlined">
+                                        <input type="text" id="text-field-outlined-cc2" class="mdc-text-field__input"
+                                            maxlength="18" aria-describedby="text-field-outlined-cc2-helper-text">
+                                        <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                                            <div class="mdc-notched-outline__leading"></div>
+                                            <div class="mdc-notched-outline__notch" style="">
+                                                <label class="mdc-floating-label" for="text-field-outlined-cc2"
+                                                    style="">Your Name</label>
+                                            </div>
+                                            <div class="mdc-notched-outline__trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell--span-6">
+                                <div class="form-group">
+                                    <div
+                                        class="mdc-text-field text-field demo-text-field-outlined-shaped mdc-text-field--outlined">
+                                        <input type="email" id="text-field-outlined-cc2" class="mdc-text-field__input"
+                                            maxlength="18" aria-describedby="text-field-outlined-cc2-helper-text">
+                                        <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                                            <div class="mdc-notched-outline__leading"></div>
+                                            <div class="mdc-notched-outline__notch" style="">
+                                                <label class="mdc-floating-label" for="text-field-outlined-cc2"
+                                                    style="">Email</label>
+                                            </div>
+                                            <div class="mdc-notched-outline__trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell--span-12">
+                                <div class="form-group">
+                                    <div
+                                        class="mdc-text-field text-field demo-text-field-outlined-shaped mdc-text-field--outlined">
+                                        <input type="text" id="text-field-outlined-cc2" class="mdc-text-field__input"
+                                            maxlength="18" aria-describedby="text-field-outlined-cc2-helper-text">
+                                        <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                                            <div class="mdc-notched-outline__leading"></div>
+                                            <div class="mdc-notched-outline__notch" style="">
+                                                <label class="mdc-floating-label" for="text-field-outlined-cc2"
+                                                    style="">Subject</label>
+                                            </div>
+                                            <div class="mdc-notched-outline__trailing"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell--span-12">
+                                <div class="form-group">
+                                    <label
+                                        class=" form-input-style mdc-text-field demo-text-field-outlined-shaped mdc-text-field--outlined mdc-text-field--textarea mdc-text-field--with-internal-counter">
+                                        <span class="mdc-notched-outline">
+                                            <span class="mdc-notched-outline__leading"></span>
+                                            <span class="mdc-notched-outline__notch">
+                                                <span class="mdc-floating-label" id="my-label-id">Textarea Label</span>
+                                            </span>
+                                            <span class="mdc-notched-outline__trailing"></span>
+                                        </span>
+                                        <span class="mdc-text-field__resizer">
+                                            <textarea class="mdc-text-field__input" aria-labelledby="my-label-id"
+                                                rows="8" cols="40" maxlength="140"></textarea>
+                                            <span class="mdc-text-field-character-counter">0 / 140</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="rounded-button contact-btn mdc-button mdc-button--unelevated demo-button-shaped mdc-ripple-upgraded"
+                            style="--mdc-ripple-fg-size:55px; --mdc-ripple-fg-scale:1.972688859545706; --mdc-ripple-fg-translate-start:57.183349609375px, -17.29998779296875px; --mdc-ripple-fg-translate-end:18.34166717529297px, -9.5px;"><span
+                                class="mdc-button__ripple"></span><span class="mdc-button__label">Send Message</span> <i
+                                class="fa fa-paper-plane"></i>
+                        </button>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content"><i class="fa fa-copyright"></i> All right reserved <img
+                src="images/MASTER-ACADEMY.svg"> <b> MASTER ACADEMY</b></div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="plugins/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="plugins/slick/slick-init.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="js/dashboard.js"></script>
+
+
+
+</body>
+
+</html>
