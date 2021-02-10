@@ -4,12 +4,15 @@ html {
 
 h1,h2,h3,h4,h5,h6{
     margin:0;
+    font-family:Roboto,sans-serif;
 }
 a{
     text-decoration: none;
+    font-family:Roboto,sans-serif;
 }
 p{
     color: #777;
+    font-family:Roboto,sans-serif;
     font-size: 13px;
 }
 .red{
@@ -120,4 +123,28 @@ ul li{
 .footer-content i {
 	line-height: 60px;
 	margin-right: 10px;
+}
+
+
+/*--------------footer------------------------*/
+footer {
+    padding: 60px 15px;
+    display: flex;
+    justify-content: space-around;
+    background: #cccfd4;
+    color: #444;
+    font-family: Roboto;
+}
+li.footer-link.footer-head img {
+    width: 40px;
+    margin-bottom: 20px;
+}
+li.footer-link.footer-head {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+li.footer-link a{
+    color: #444;
+    line-height: 25px;
 }

@@ -1,3 +1,236 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.top-conten {
+	min-height: 80vh;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+  position: relative;
+  background-size: cover;
+}
+.background-overlay{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: transparent;
+  background-image: linear-gradient(70deg, rgba(9,132,227,0.85) 40%, rgba(0,59,177,0.98) 100%);
+  opacity: 0.9;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+/*----------search---------*/
+.search-container{
+	position: relative;
+	margin: 0;
+}
+.search:focus {
+	width: 363px; /* Bar width+1px */
+	padding: 0 16px 0 0;
+}
+
+.expandright {
+	left: auto;
+	right: 49px; /* Button width-1px */
+}
+
+.expandright:focus {
+	padding: 0 0 0 16px;
+}
+
+.search {
+	position: absolute;
+	/* left: 49px; */
+	background-color: white;
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 0;
+	height: 100%;
+	z-index: 10;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+.searchbutton {
+	position: relative;
+	font-size: 22px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.search:focus + .searchbutton {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	background-color: white;
+	color: black;
+}
+.search-btn {
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	fill: currentColor;
+	color: white;
+	font-size: 24px;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 48px;
+	height: 48px;
+	padding: 12px;
+}
+
+/*----------search end---------*/
+/*-----------sticky nav-------------*/
+/* Create a sticky/fixed navbar */
+#navbar {
+  overflow: hidden;
+  background-color: transparent;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 50px;
+  border-radius: 4px;
+}
+a#logo {
+  padding-left: 0;
+}
+/* Style the logo */
+#logo img {
+  width: 50px;
+  padding-right: 10px;
+}
+
+#navbar #logo {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+/* Links on mouse-over */
+#navbar a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+  border-radius: inherit;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Display some links to the right */
+#navbar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#navbar-right a.mdc-button {
+  margin: 0 15px;
+}
+#navbar-right a.mdc-button.mdc-button--outlined.signin {
+  border: 2px solid white;
+}
+#navbar-right a.getstarted{
+  background-color: #fff;
+  color: black;
+}
+#navbar-right a.getstarted:hover{
+  background-color:green;
+  color: #fff;
+}
+
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+.mdc-dialog--open{
+  z-index:999;
+}
+#loginform-content {
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+/*----------------nav end--------------*/
+/*--------------hero section--------------*/
+.hero-content {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 100px;
+  justify-content: space-around;
+  position: absolute;
+  z-index:80;
+  left: 0;
+  right: 0;
+}
+.hero-info {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.hero-title {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 800;
+}
+.hero-desc {
+  font-size: 20px;
+  color: #fff;
+}
+.registarion-form-sec.mdc-card {
+  width: 25%;
+  padding: 30px;
+  text-align: center;
+}
+.form-title {
+  margin-bottom: 20px;
+}
+
+/*--------------hero sec end----------------*/
+
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -80,7 +313,7 @@
 .or-text {
 	display: block;
 	padding-bottom: 10px;
-	border-bottom: 1px solid #757677;
+  position: relative;
 }
 .or-text h5 {
 	font-size: 25px;
@@ -105,4 +338,80 @@
 } */
 
 
+/*----------------------showcase section-----------------*/
+.accent {
+  background: #f7f9fb;
+}
+.section {
+  background: #fff;
+  overflow: hidden;
+  padding: 100px 0;
+  position: relative;
+  text-align: center;
+}
+.content-header {
+  font-size: 36px;
+  max-width: 90vw;
+}
+.subheader {
+  font-size: 20px;
+  max-width: 90vw;
+  margin-bottom: 40px;
+}
+.feature {
+  margin-bottom: 50px;
+}
+.feature-icon {
+  display: flex;
+  flex-flow: column;
+  font-size: 35px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.feature-icon i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #efefef;
+  padding: 5px;
+  line-height: 50px;
+  color:#6200ee;
+}
+p.blurb {
+  font-size: 16px;
+  line-height: 25px;
+}
 
+
+/*----------why-us-------------*/
+section.section.why_resume {
+  background: #f4f9ff;
+}
+.why-content {
+  display: flex;
+  justify-content:center;
+  margin-bottom: 50px;
+}
+.why-content-image img {
+  width: 20vw;
+}
+.why-feature {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+.why-feature-content {
+  width: 40vw;
+  margin: 0 50px;
+}
+.why-content-image img {
+  width: 20vw;
+  margin: 0 30px;
+}
+h4.feature-title {
+  font-size: 30px;
+  font-weight: 800;
+}
