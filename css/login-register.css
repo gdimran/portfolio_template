@@ -351,6 +351,7 @@ a#logo {
 }
 .content-header {
   font-size: 36px;
+  text-transform: uppercase;
   max-width: 90vw;
 }
 .subheader {

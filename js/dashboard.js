@@ -47,7 +47,8 @@ dialogElements.forEach((dialogEl) => {
   mdc.dialog.MDCDialog.attachTo(dialogEl);
 });
 
-const protfolioAction = document.querySelector('#protfolio-details-action');
+//const protfolioAction = document.querySelector('#protfolio-details-action');
+const protfolioAction = document.querySelector('.portfolio-item a');
 protfolioAction.addEventListener("click", () => {
   protfolioDialog.open();
   protfolioDialog.autoStackButtons =false;
@@ -55,11 +56,15 @@ protfolioAction.addEventListener("click", () => {
   protfolioDialog.scrimClickAction ="";
 
 });
-
 const protfolioDialog = mdc.dialog.MDCDialog.attachTo(document.querySelector('.protfolio_details'));
 protfolioDialog.listen('MDCDialog:opened', function () {
     // Assuming contentElement references a common parent element with the rest of the page's content
     
+});
+
+const portfolioDetailsEl=[].slice.call(document.querySelectorAll('.protfolio_details'));
+portfolioDetailsEl.forEach((protfolioEl) => {
+  mdc.dialog.MDCDialog.attachTo(protfolioEl);
 });
 
 
